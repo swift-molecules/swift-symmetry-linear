@@ -55,7 +55,7 @@ struct `Scale Tests` {
 
     @Test
     func `Uniform scale creates equal factors`() {
-        let scale = Scale<2, Double>.uniform(3.0)
+        let scale = Scale<2, Double>.uniform(Scale<1, Double>(3.0))
         #expect(scale.x == 3.0)
         #expect(scale.y == 3.0)
     }
@@ -205,15 +205,4 @@ struct `Scale Tests` {
         #expect(linear.d == 1)
     }
 
-    @Test
-    func `1D scale from float literal`() {
-        let scale: Scale<1, Double> = 2.5
-        #expect(scale.value == 2.5)
-    }
-
-    @Test
-    func `1D scale from integer literal`() {
-        let scale: Scale<1, Double> = 3
-        #expect(scale.value == 3.0)
-    }
 }
