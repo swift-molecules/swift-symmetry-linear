@@ -27,7 +27,7 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-atoms/swift-dimension.git",
+            url: "https://github.com/swift-atoms/swift-spatial.git",
             branch: "main"
         ),
     ],
@@ -37,16 +37,15 @@ let package = Package(
             dependencies: [
                 .product(name: "Symmetry", package: "swift-symmetry"),
                 .product(name: "Linear", package: "swift-linear"),
-                .product(name: "Dimension", package: "swift-dimension"),
+                .product(name: "Spatial", package: "swift-spatial"),
             ]
         ),
         .testTarget(
             name: "Symmetry Linear Tests",
             dependencies: [
-                "Symmetry Linear",
                 .product(name: "Symmetry", package: "swift-symmetry"),
                 .product(name: "Linear", package: "swift-linear"),
-                .product(name: "Dimension", package: "swift-dimension"),
+                .product(name: "Spatial", package: "swift-spatial"),
             ]
         ),
     ],
