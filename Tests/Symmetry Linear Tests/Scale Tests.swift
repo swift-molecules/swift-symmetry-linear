@@ -1,4 +1,4 @@
-import Dimension
+import Scale
 import Linear
 import Testing
 

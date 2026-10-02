@@ -1,4 +1,4 @@
-public import Dimension
+public import Scale
 public import Linear
 
 extension Scale where N == 2, Scalar: ExpressibleByIntegerLiteral {
